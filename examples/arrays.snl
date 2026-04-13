@@ -1,0 +1,16 @@
+program arrays
+var
+  integer nums[4], i, total;
+begin
+  nums[0] := 3;
+  nums[1] := 4;
+  nums[2] := nums[0] + nums[1];
+  nums[3] := 10;
+  i := 0;
+  total := 0;
+  while i < 4 do
+    total := total + nums[i];
+    i := i + 1
+  endwh;
+  write(total)
+end.

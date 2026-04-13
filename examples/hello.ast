@@ -1,0 +1,8 @@
+Program hello
+  Declarations
+    (empty)
+  Procedures
+    (empty)
+  Body
+    Write
+      String 'Hello'

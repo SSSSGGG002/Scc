@@ -1,0 +1,17 @@
+program procedures
+var
+  integer x;
+procedure bump(integer step; var integer target);
+  procedure twice();
+  begin
+    target := target + step
+  end
+begin
+  twice();
+  twice()
+end
+begin
+  x := 1;
+  bump(2, x);
+  write(x)
+end.

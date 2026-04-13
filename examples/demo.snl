@@ -1,0 +1,18 @@
+program demo
+var
+  integer x, y;
+  char c;
+begin
+  read(x);
+  y := x + 10;
+  c := 'A';
+  if y < 20 then
+    write(y)
+  else
+    write(c)
+  fi;
+  while x < y do
+    x := x + 1
+  endwh;
+  write(x)
+end.

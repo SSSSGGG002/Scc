@@ -1,0 +1,56 @@
+Program demo
+  Declarations
+    VarDecl integer
+      Var x
+      Var y
+    VarDecl char
+      Var c
+  Procedures
+    (empty)
+  Body
+    Read
+      VarRef x
+    Assign
+      Target
+        VarRef y
+      Value
+        Binary +
+          Left
+            VarRef x
+          Right
+            Int 10
+    Assign
+      Target
+        VarRef c
+      Value
+        Char 'A'
+    If
+      Condition <
+        Left
+          VarRef y
+        Right
+          Int 20
+      Then
+        Write
+          VarRef y
+      Else
+        Write
+          VarRef c
+    While
+      Condition <
+        Left
+          VarRef x
+        Right
+          VarRef y
+      Body
+        Assign
+          Target
+            VarRef x
+          Value
+            Binary +
+              Left
+                VarRef x
+              Right
+                Int 1
+    Write
+      VarRef x

@@ -1,0 +1,84 @@
+Program arrays
+  Declarations
+    VarDecl integer
+      Array nums[4]
+      Var i
+      Var total
+  Procedures
+    (empty)
+  Body
+    Assign
+      Target
+        ArrayRef nums
+          Index
+            Int 0
+      Value
+        Int 3
+    Assign
+      Target
+        ArrayRef nums
+          Index
+            Int 1
+      Value
+        Int 4
+    Assign
+      Target
+        ArrayRef nums
+          Index
+            Int 2
+      Value
+        Binary +
+          Left
+            ArrayRef nums
+              Index
+                Int 0
+          Right
+            ArrayRef nums
+              Index
+                Int 1
+    Assign
+      Target
+        ArrayRef nums
+          Index
+            Int 3
+      Value
+        Int 10
+    Assign
+      Target
+        VarRef i
+      Value
+        Int 0
+    Assign
+      Target
+        VarRef total
+      Value
+        Int 0
+    While
+      Condition <
+        Left
+          VarRef i
+        Right
+          Int 4
+      Body
+        Assign
+          Target
+            VarRef total
+          Value
+            Binary +
+              Left
+                VarRef total
+              Right
+                ArrayRef nums
+                  Index
+                    VarRef i
+        Assign
+          Target
+            VarRef i
+          Value
+            Binary +
+              Left
+                VarRef i
+              Right
+                Int 1
+    Write
+      VarRef total

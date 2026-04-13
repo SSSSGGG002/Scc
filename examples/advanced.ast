@@ -1,0 +1,70 @@
+Program advanced
+  Declarations
+    VarDecl integer
+      Var x
+      Var y
+  Procedures
+    (empty)
+  Body
+    Assign
+      Target
+        VarRef x
+      Value
+        Binary *
+          Left
+            Unary -
+              Binary +
+                Left
+                  Int 2
+                Right
+                  Int 3
+          Right
+            Int 4
+    Assign
+      Target
+        VarRef y
+      Value
+        Int 7
+    If
+      Condition <=
+        Left
+          VarRef x
+        Right
+          Unary -
+            Int 20
+      Then
+        Write
+          String 'folded'
+      Else
+        Write
+          String 'broken'
+    If
+      Condition <>
+        Left
+          VarRef y
+        Right
+          Int 0
+      Then
+        Write
+          VarRef y
+      Else
+        Write
+          String 'zero'
+    While
+      Condition <
+        Left
+          VarRef x
+        Right
+          VarRef y
+      Body
+        Assign
+          Target
+            VarRef x
+          Value
+            Binary +
+              Left
+                VarRef x
+              Right
+                Int 5
+    Write
+      VarRef x

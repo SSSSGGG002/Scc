@@ -1,0 +1,39 @@
+Program procedures
+  Declarations
+    VarDecl integer
+      Var x
+  Procedures
+    Procedure bump
+      Params
+        Param value integer step
+        Param ref integer target
+      Procedures
+        Procedure twice
+          Params (empty)
+          Body
+            Assign
+              Target
+                VarRef target
+              Value
+                Binary +
+                  Left
+                    VarRef target
+                  Right
+                    VarRef step
+      Body
+        Call twice
+          Args (empty)
+        Call twice
+          Args (empty)
+  Body
+    Assign
+      Target
+        VarRef x
+      Value
+        Int 1
+    Call bump
+      Args
+        Int 2
+        VarRef x
+    Write
+      VarRef x

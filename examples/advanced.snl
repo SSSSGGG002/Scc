@@ -1,0 +1,21 @@
+program advanced
+var
+  integer x, y;
+begin
+  x := -(2 + 3) * 4;
+  y := 7;
+  if x <= -20 then
+    write("folded")
+  else
+    write("broken")
+  fi;
+  if y <> 0 then
+    write(y)
+  else
+    write("zero")
+  fi;
+  while x < y do
+    x := x + 5
+  endwh;
+  write(x)
+end.
